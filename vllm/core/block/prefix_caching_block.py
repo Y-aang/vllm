@@ -79,7 +79,7 @@ class PrefixCachingBlockAllocator(BlockAllocator):
         num_blocks: int,
         block_size: int,
         block_ids: Optional[Iterable[int]] = None,
-        eviction_policy: EvictionPolicy = EvictionPolicy.LRU,
+        eviction_policy: EvictionPolicy = EvictionPolicy.CUSTOMIZED,
     ):
         if block_ids is None:
             block_ids = range(num_blocks)
